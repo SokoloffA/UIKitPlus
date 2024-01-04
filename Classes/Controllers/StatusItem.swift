@@ -14,7 +14,7 @@ open class StatusItem: AppBuilderContent {
     lazy var _tintState: State<UColor> = .init(wrappedValue: .init(item.button?.contentTintColor ?? .cyan))
     lazy var _hiddenState: State<Bool> = .init(wrappedValue: !item.isVisible)
     
-    let item: NSStatusItem
+    public let item: NSStatusItem
     
     public init (_ statusBar: NSStatusBar = .system, length: CGFloat = NSStatusItem.squareLength) {
         item = statusBar.statusItem(withLength: length)
