@@ -8,7 +8,7 @@
 #if os(macOS)
 import Cocoa
 
-public class StatusItem: AppBuilderContent {
+open class StatusItem: AppBuilderContent {
     public var appBuilderContent: AppBuilderItem { .statusItems([self]) }
     
     lazy var _tintState: State<UColor> = .init(wrappedValue: .init(item.button?.contentTintColor ?? .cyan))
