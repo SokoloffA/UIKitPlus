@@ -16,6 +16,10 @@ open class StatusItem: AppBuilderContent {
     
     public let item: NSStatusItem
     
+    public init (item: NSStatusItem) {
+        self.item = item
+    }
+
     public init (_ statusBar: NSStatusBar = .system, length: CGFloat = NSStatusItem.squareLength) {
         item = statusBar.statusItem(withLength: length)
     }
